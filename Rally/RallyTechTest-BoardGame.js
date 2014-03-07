@@ -129,12 +129,14 @@ function createBoard(xLen, yLen){
 
 function addMembers(members){
     PARTICIPANTS = members.length;
-    for(var x=0,l=BOARDX; x<l; x+=BOARDX){
+    for(var i=0,l=members.length; i<l; i+=BOARDX){
+        var x = i/8;
         console.log('@loops x', x);
-        for(var y=x,ll=x+BOARDY; y<ll; y++){
-            console.log('\t@loops y', y);
-            if(members[x] || members[y]){
-                MATROID[x][y] = new Person(members[y], {x: x, y: y});
+        for(var j=i,ll=i+BOARDY; j<ll; j++){
+            var y = j-x*BOARDY;
+            console.log('\t@loops y', j, y );
+            if(members[i] || members[j]){
+                MATROID[x][y] = new Person(members[j], {x: x, y: y});
             }
         }
     }
