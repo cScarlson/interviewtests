@@ -229,7 +229,7 @@ var Darwin = (function(){
     sample: displayMembers,
     evolve: evolve,
     resample: rerender,
-    sendFlowers: sendFlowers
+    sendFlowers: sendFlowersTo
   };
 
 })();
