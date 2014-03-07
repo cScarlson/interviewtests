@@ -228,7 +228,8 @@ var Darwin = (function(){
     mixStatuses: randomizeStatuses,
     sample: displayMembers,
     evolve: evolve,
-    resample: rerender
+    resample: rerender,
+    sendFlowers: sendFlowers
   };
 
 })();
